@@ -1,0 +1,249 @@
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-shadow: none;
+    font-family: 'Fraunces', serif;
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 70px 1fr 70px;
+    font-size: 18px;
+    row-gap: 20px;
+    padding: 7px;
+    grid-template-areas: "header    header       header"
+        "aside1    aboutMe      aside2"
+        "footer    footer       footer";
+
+}
+
+.background {
+    background-image: url(./Imagén/pexels-artem-podrez-4884110.jpg);
+    background-size: cover;
+    background-position: end;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.inside img{
+    position: absolute;
+    z-index:2;
+    width:485px;
+    height: 305px;
+    right:455px;
+    top:275px;
+    border:1px solid grey;
+} 
+
+
+.backgroundContent{
+    background-color:rgba(168, 163, 163, 0.192);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover{
+    color:rgb(243, 9, 138);
+}
+
+.inside {
+    display: flex;
+    flex-direction: colum;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 50px;
+}
+
+div a {
+    text-decoration: none;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+    border-bottom: 2px solid pink;
+}
+
+.aside1 {
+    grid-area: aside1;
+
+}
+
+.aboutMe {
+    grid-area: aboutMe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    column-gap: 20px;
+    height: 250px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: #fff;
+    font-size: 1em;
+
+}
+
+.fotoPerfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin:auto;
+    padding: 10px;
+}
+
+.fotoPerfil img{
+    border-radius: 100px;
+    width:200px; 
+    height:200px;
+
+}
+   
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    padding: 20px 20px;
+}
+
+.logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 7px;
+}
+
+.logos p{
+    font-size: 10px;
+   
+}
+
+.logos2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logos2 button{
+    margin-top:7px;
+}
+
+.logosyCards{
+    display:flex;
+    flex-direction: row;
+    width:300px;
+
+}
+
+.misProyectos {
+    grid-area: misProyectos;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100%;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 10px;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;;
+    width: 200px;
+    border-radius: 5px;
+    border:0.5px solid pink;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    cursor: pointer;
+    padding:10px;
+    text-align: center;
+}
+
+
+.logosyCards:hover{
+    transform: scale(1.1);
+}
+
+.aside2 {
+    grid-area: aside2;
+}
+
+button{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 20px;
+    font-size: 14px;
+    background-color:#fff;;
+
+}
+
+button:hover{
+    transform: translate(-100%);
+}
+
+.button1:hover{
+    color:orangered;
+}
+
+.button2:hover{
+    color:blue;
+}
+
+.button3:hover{
+    color:yellow;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    border-top: 2px solid pink;
+
+}
+
+footer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+
+@media only scr
