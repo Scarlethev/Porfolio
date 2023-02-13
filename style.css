@@ -7,17 +7,18 @@
 
 }
 
-body {
+body{
     display: grid;
     grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 70px 1fr 70px;
+    grid-template-rows: 50px 1fr 60px;
     font-size: 18px;
     row-gap: 20px;
     padding: 7px;
-    width:100vw;
+    width:95vw;
+    margin: auto;
     grid-template-areas: "header    header       header"
-        "aside1    aboutMe      aside2"
-        "footer    footer       footer";
+                        "aside1     aboutMe      aside2"
+                         "footer    footer       footer";
 
 }
 
@@ -35,19 +36,18 @@ body {
     z-index:2;
     width:485px;
     height: 305px;
-    right:470px;
+    right:400px;
     top:275px;
     border:1px solid grey;
 } 
 
-
 .backgroundContent{
-    background-color:rgba(168, 163, 163, 0.192);
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
+
 
 ul {
     display: flex;
@@ -74,6 +74,7 @@ li a:hover{
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
@@ -108,6 +109,7 @@ div a {
     column-gap: 20px;
     height: 250px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border:3px solid  rgba(149, 157, 165, 0.2);
     background-color: #fff;
     font-size: 1em;
 
@@ -126,7 +128,7 @@ div a {
 .fotoPerfil img{
     border-radius: 100px;
     width:200px; 
-    height:200px;
+    height:220px;
 
 }
    
@@ -136,7 +138,36 @@ div a {
     justify-content: center;
     row-gap: 20px;
     padding: 20px 20px;
+    
 }
+
+.language{
+grid-area: language;
+display:flex;
+flex-direction: row;
+justify-content: center;
+column-gap: 20px;
+align-items: center;
+height: 200px;
+width:100%;
+background:-webkit-linear-gradient(320deg, rgba(120, 77, 221, 0.466) 0%, rgba(78, 5, 146, 0.541));
+color:#fff;
+border-radius: 20px;
+}
+
+
+.language > button{
+    position: relative;
+    display: flex;
+    width: 10%;
+    height: 15%;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #343434;
+}
+
 
 .logos{
     display: flex;
@@ -185,24 +216,46 @@ div a {
     flex-direction: column;
     background-color: #fff;;
     width: 200px;
-    border-radius: 5px;
-    border:0.5px solid pink;
+    border-radius: 15px;
+    border:1px solid rgba(149, 157, 165, 0.2);;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    cursor: pointer;
-    padding:10px;
+    padding: 10px;
     text-align: center;
 }
 
+.card img:hover{
+    opacity: 0.5;
+}
 
-.logosyCards:hover{
+.card iframe:hover{
+    opacity: 0.5;
+}
+
+
+.go{
+    column-gap: 10px;
+    border: 2px solid pink;
+    border-radius: 20px;
+    height: 30px;
+    width:90px;
+    margin-top: 10px;
+}
+
+.go:hover{
+    cursor: pointer;
     transform: scale(1.1);
 }
+
+/*.logosyCards:hover{
+    transform: scale(1.1);
+    opacity: 0.5;
+}*/
 
 .aside2 {
     grid-area: aside2;
 }
 
-button{
+.button{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -213,21 +266,66 @@ button{
 
 }
 
-button:hover{
+.button:hover{
     transform: translate(-100%);
 }
 
-.button1:hover{
+.uno:hover{
     color:orangered;
 }
 
-.button2:hover{
+.dos:hover{
     color:blue;
 }
 
-.button3:hover{
+.tres:hover{
     color:yellow;
 }
+
+/*.switch{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    background-color: #343d58;
+    border:none;
+    border-radius: 1000px;
+    outline: none;
+    cursor: pointer;
+}
+
+.switch.active{
+    background-color: orange;
+    color:#000;
+}
+
+.switch span{
+    width:30px;
+    height:30px;
+    display: block;
+    background: none;
+    color:#fff;
+}
+
+i{
+margin-top: 7px;
+}
+
+span::after{
+    content:"";
+    width:30px;
+    height:30px;
+    position: absolute;
+    left:0;
+    top:0;
+    display:block;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    right:unset;
+    border-radius: 100px;
+    transition: .3s ease all ;
+    }*/
+
 
 .footer {
     grid-area: footer;
@@ -245,4 +343,15 @@ footer div {
     justify-content: center;
     align-items: center;
     column-gap: 20px;
+}
+
+@media (max-width: 375px){
+    body{
+        grid-template-areas: "header    header       header"
+                            "aboutMe    aboutMe      aboutMe"
+                             "footer    footer       footer";
+    width:375px;
+    max-width:375px;
+    }
+
 }
