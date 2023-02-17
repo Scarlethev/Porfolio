@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"/>
-       <link rel="stylesheet" href="../style.css">
+       <link rel="stylesheet" href="./style.css">
     <title>Mi Portfolio</title>
 </head>
 
@@ -35,7 +35,7 @@
 
         <section class="aboutMe">
             <div class="fotoPerfil">
-                <img src="../Imagén/Imagen perfil.jpeg" alt="fotoDePerfil">
+                <img src="./Imagén/Imagen perfil.jpeg" alt="fotoDePerfil">
             </div>
             <div class="text">
                 <p> Hola, Soy Scarleth y yo <i class="fa-regular fa-heart"></i> programar..</p>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="card">
                     <h5>Maquetado</h5>
-                    <iframe src="../Iframe/New Project.pdf" frameborder="0" style="height:200px; width:200px"></iframe>
+                    <iframe src="./Iframe/New Project.pdf" frameborder="0" style="height:200px; width:200px"></iframe>
                     <span>
                         <a href="" target="_blank"><button class="go"> Ver in linea</button></a>
                         <a href="" target="_blank"><button class="go"> Ir a github  </button></a> 
@@ -98,7 +98,7 @@
                 <div class="card">
                     <h5>Página WEB</h5>
                     <hr>
-                    <img src="../Imagén/PáginaWEB.jpeg" alt="foto de Página WEB" style="width:200px; height:200px">
+                    <img src="./Imagén/PáginaWEB.jpeg" alt="foto de Página WEB" style="width:200px; height:200px">
                     <span>
                         <a href="" target="_blank"><button class="go"> Ver in linea  </button></a>
                      <a href="https://github.com/yendaravila/recetarioMiVenezuela.git" target="_blank"><button class="go"> Ir a github </button></a>     
@@ -113,7 +113,7 @@
                 <div class="card">
                     <h5>Challenge</h5>
                     <hr>
-                    <img src="../Imagén/Challenge1.jpeg" alt="Foto de perfume" style="width:200px; height:200px">
+                    <img src="./Imagén/Challenge1.jpeg" alt="Foto de perfume" style="width:200px; height:200px">
                     <span>
                         <a href="" target="_blank"><button class="go"> Ver in linea </button></a>
                         <a href="https://github.com/Scarlethev/Desafio-Frontend-Metor.git" target="_blank"><button class="go"> Ir a github  </button></a>
@@ -130,7 +130,7 @@
                 <div class="card">
                     <h5>Maquetado</h5>
                     <hr>
-                    <iframe src="../Iframe/New Project.pdf" frameborder="0" style="height:200px; width:200px""></iframe>
+                    <iframe src="./Iframe/New Project.pdf" frameborder="0" style="height:200px; width:200px""></iframe>
                     <span>
                         <a href="" target="_blank"><button class="go"> Ver in linea</button></a>
                         <a href="" target="_blank"><button class="go"> Ir a github  </button></a> 
@@ -145,7 +145,7 @@
                         <div class="card">
                             <h5>Página WEB</h5>
                             <hr>
-                            <img src="../Imagén/PáginaWEB.jpeg" alt="foto de Página WEB"
+                            <img src="./Imagén/PáginaWEB.jpeg" alt="foto de Página WEB"
                                 style="width:200px; height:200px">
                                 <span>
                                     <a href="" target="_blank"><button class="go"> Ver in linea  </button></a>
@@ -161,7 +161,7 @@
                     <div class="card">
                         <h5>Challenge</h5>
                         <hr>
-                        <img src="../Imagén/Challenge1.jpeg" alt="Foto de perfume" style="width:200px; height:200px">
+                        <img src="./Imagén/Challenge1.jpeg" alt="Foto de perfume" style="width:200px; height:200px">
                         <span>
                             <a href="" target="_blank"><button class="go"> Ver in linea </button></a>
                             <a href="https://github.com/Scarlethev/Desafio-Frontend-Metor.git" target="_blank"><button class="go"> Ir a github  </button></a>
@@ -187,6 +187,24 @@
         </div>
 
     </footer>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+
 </body>
 
 </html>
