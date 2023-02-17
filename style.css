@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
     border: 0px;
@@ -9,7 +10,7 @@
 
 body{
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 100px 1fr 100px;
     grid-template-rows: 50px 1fr 60px;
     font-size: 18px;
     row-gap: 20px;
@@ -21,33 +22,6 @@ body{
                          "footer    footer       footer";
 
 }
-
-.background {
-    background-image: url(./Imagén/pexels-artem-podrez-4884110.jpg);
-    background-size: cover;
-    background-position: end;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-}
-
-.inside img{
-    position: absolute;
-    z-index:2;
-    width:485px;
-    height: 305px;
-    right:400px;
-    top:275px;
-    border:1px solid grey;
-} 
-
-.backgroundContent{
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 
 ul {
     display: flex;
@@ -166,6 +140,24 @@ border-radius: 20px;
     justify-content: center;
     align-items: center;
     border:1px solid #343434;
+}
+
+.animacion:hover{
+animation:2s aparicion 1;
+cursor: pointer;
+}
+
+@keyframes aparicion{
+    0%{
+        opacity: 0;
+    }
+      50%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -345,13 +337,68 @@ footer div {
     column-gap: 20px;
 }
 
-@media (max-width: 375px){
+@media (max-width: 400px){
+
     body{
-        grid-template-areas: "header    header       header"
-                            "aboutMe    aboutMe      aboutMe"
-                             "footer    footer       footer";
-    width:375px;
-    max-width:375px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:95vw;
+        padding: 0px;
+
     }
+
+    main{
+        width:90%;
+        padding: 1px;
+    }
+
+    .language{
+        flex-direction: column;
+        row-gap: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .language button{
+        width:100px;
+    }
+    
+    .aboutMe{
+        display:flex;
+        flex-direction:column;
+        height: auto;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+
+    .aboutMe{
+        display:flex;
+        flex-direction:column;
+        height: auto;
+
+    }
+
+    .language{
+        padding-left: 10px;
+        padding-right: 10px;
+        width:100%;
+    }
+
+    .language button{
+        font-size: small;
+        width:50%;
+    }
+
+    }
+
+
+
+    
+    
 
 }
